@@ -29,3 +29,11 @@
 .key.highlight {
   background-color: #A9B4C2;
 }
+
+.active-row {
+  display: inline-block;
+}
+
+.inactive-row {
+  display: none;
+}
