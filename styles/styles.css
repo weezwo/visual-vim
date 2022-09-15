@@ -9,6 +9,7 @@
   text-align: center;
 }
 .key {
+  text-align: left;
   display: inline-block;
   height: 70px;
   width: 60px;
