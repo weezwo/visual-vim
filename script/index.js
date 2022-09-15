@@ -1,36 +1,40 @@
+const keyboard = document.querySelector('#keyboard');
 
-// const keyWidth = vh(10);
-// const keyHeight = vh(12);
+const firstRow = ['`', 'q','w','e','r','t','y','u','i','o','p','[',']']
+const secondRow = ['tab','a','s','d','f','g','h','j','k','l',';','\'','\\']
+const thirdRow = ['ctrl','alt','z','x','c','v','b','n','m',',','.','/','shift']
 
-// let xOffset = vh(3);
-// let yOffset = vh(3);
+function drawKeyboardRow(row) {
+  let container = document.createElement('div');
+  container.classList.add('keyboard-row');
+  row.forEach(k => {
+    let newKey = document.createElement('div');
+    newKey.classList.add('key');
+    newKey.dataset.key = k;
+    container.appendChild(newKey);
+  });
+  keyboard.appendChild(container);
+}
 
-// const letterOffsetX = vh(1);
-// const letterOffsetY = vh(4);
+drawKeyboardRow(firstRow);
+drawKeyboardRow(secondRow);
+drawKeyboardRow(thirdRow);
 
-// const spacer = vh(1);
+const keys = document.querySelectorAll('.key');
 
-// const c = document.getElementById('keyboard');
-// const ctx = c.getContext('2d');
+keys.forEach(key => {
+  key.innerHTML = key.dataset.key;
+})
 
-// // Q
-// ctx.beginPath();
-// ctx.rect(xOffset, yOffset, keyWidth, keyHeight);
-// ctx.lineWidth = '2';
-// ctx.stroke();
+addEventListener('keydown', (event) => {
+  event.preventDefault();
+  keys.forEach(key => {
+    if (key.dataset.key == event.key.toLowerCase()) key.classList.add('highlight');
+    if(event.ctrlKey && key.dataset.key == "ctrl") key.classList.add('highlight');
+  })
+});
 
-// ctx.font = `${vh(3)}px Arial`
-// ctx.strokeText('Q', xOffset + letterOffsetX, yOffset + letterOffsetY);
+addEventListener('keyup', (event) => {
+  keys.forEach(key => key.classList.remove('highlight'));
+});
 
-// // W
-// ctx.beginPath();
-// ctx.rect(1.5 * xOffset + keyWidth, yOffset, keyWidth, keyHeight);
-// ctx.lineWidth = '2';
-// ctx.stroke();
-
-// ctx.font = `${vh(3)}px Arial`
-// ctx.strokeText('W', xOffset + keyWidth + letterOffsetX * 3, yOffset + letterOffsetY);
-
-// function vh(p) {
-//   return (window.innerHeight / 100) * p;
-// }
