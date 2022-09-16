@@ -3,14 +3,14 @@ const keyboard = document.querySelector('#keyboard');
 const numRow = ['`','1','2','3','4','5','6','7','8','9','0','-','='];
 const numShiftRow = ['~','!','@','#','$','%','^','&','*','(',')','_','+']
 
-const qRow = ['`', 'q','w','e','r','t','y','u','i','o','p','[',']']
-const qShiftRow =  ['~', 'Q','W','E','R','T','Y','U','I','O','P','{','}']
+const qRow = ['Tab', 'q','w','e','r','t','y','u','i','o','p','[',']']
+const qShiftRow =  ['Tab', 'Q','W','E','R','T','Y','U','I','O','P','{','}']
 
-const aRow = ['Tab','a','s','d','f','g','h','j','k','l',';','\'','\\']
-const aShiftRow = ['Tab','A','S','D','F','G','H','J','K','L',':','"','\|'];
+const aRow = ['Shift','a','s','d','f','g','h','j','k','l',';','\'','\\']
+const aShiftRow = ['Shift','A','S','D','F','G','H','J','K','L',':','"','\|'];
 
-const zRow = ['Ctrl','Alt','z','x','c','v','b','n','m',',','.','/','Shift'];
-const zShiftRow = ['Ctrl','Alt','Z','X','C','V','B','N','M','<','>','?','Shift']
+const zRow = ['Ctrl','Alt','z','x','c','v','b','n','m',',','.','/','Ctrl'];
+const zShiftRow = ['Ctrl','Alt','Z','X','C','V','B','N','M','<','>','?','Ctrl']
 
 const rows = [numRow, numShiftRow, qRow, qShiftRow, aRow, aShiftRow, zRow, zShiftRow];
 
