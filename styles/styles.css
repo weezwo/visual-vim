@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
 }
 
 .keyboard-row {
@@ -36,4 +37,12 @@
 
 .inactive-row {
   display: none;
+}
+
+.key-caption {
+  font-size: 50%;
+  max-width: 90%;
+  overflow: hidden;
+  line-height: 95%; 
+  position: relative;
 }
