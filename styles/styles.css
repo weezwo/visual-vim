@@ -46,6 +46,14 @@
   font-size: 50%;
   max-width: 90%;
   overflow: hidden;
-  line-height: 95%; 
+  line-height: 115%; 
   position: relative;
+}
+
+.op-caption {
+  color: #7D98A1;
+}
+
+.mo-caption {
+  color: #5E6572;
 }

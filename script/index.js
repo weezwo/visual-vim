@@ -53,10 +53,14 @@ const keyMotions = {
   '0':'beginning of line',
   '(':'prev sentence',
   ')':'next sentence',
-  '{':'prev paragraph',
+  '{':'prev pg',
+  '}':'next pg',
   'w':'next word',
   'e':'end of word',
   't':'tab',
+  'i':'inside',
+  'p':'next pg',
+  'a':'around',
   'h':'left',
   'j':'down',
   'k':'up',
@@ -65,10 +69,16 @@ const keyMotions = {
   'b':'backward',
   'n':'next match',
   '/':'match pattern',
-  'W':'WORD',
+  'W':'next WORD',
   'E':'end prev word',
   'T':'prev tab',
-  'G':'end of file'
+  'P':'prev pg',
+  'G':'end of file',
+  'V':'visual by line',
+  'B':'prev WORD',
+  'N':'prev match',
+  '.':'repeat',
+  '?':'match prev'
 }
 
 let domRows = [];
